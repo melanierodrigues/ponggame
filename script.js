@@ -1,3 +1,8 @@
+//// IMAGENS
+var imagem1 = document.getElementById("imagempinypong1");
+var imagem2 = document.getElementById("imagempinypong2");
+var imagem3 = document.getElementById("imagempinypong3");
+
 // Elementos
 var vbtnIniciar;
 var vJogador;
@@ -172,6 +177,14 @@ function controlaBola(){
         jogo = false;
         vJogador.style.top = posJogadorY+"px"; 
         vCpu.style.top = posCpuY+"px"; 
+
+
+        jogadorMarca();
+        jogadorMarca2();
+        jogadorMarca3(); ////////////////////
+        
+
+        
     } else if (posBolaX <= 0){
         velBola = 0;
         posBolaX = posBolaInicialX;
@@ -183,6 +196,7 @@ function controlaBola(){
         jogo = false;
         vJogador.style.top = posJogadorY+"px"; 
         vCpu.style.top = posCpuY+"px"; 
+        
     }
 
 
@@ -212,7 +226,7 @@ function game(){
     if(jogo){
         controlaJogador();
         controlaBola();
-        controlaCpu()
+        controlaCpu();
     }
     frames = requestAnimationFrame(game);
 }
@@ -220,7 +234,7 @@ function game(){
 function iniciaJogo(){
     if(!jogo){
         velBola = 6;
-        velCpu = 10;
+        velCpu = 0; //////////////////
         velJogador = 10;
         cancelAnimationFrame(frames);
         jogo = true;
@@ -240,6 +254,12 @@ function iniciaJogo(){
         } else {
             bolaX = 1;
         }
+
+
+        
+        jogadorMarcaReset();
+        jogadorMarcaReset2();
+        jogadorMarcaReset3();////////////////////
 
         posBolaX = posBolaInicialX;
         posBolaY = posBolaInicialY;
@@ -440,6 +460,54 @@ function tecla2(){
     }
 }
  document.onkeydown=tecla2;
+
+ //// IMAGENS
+
+ function jogadorMarca(){
+
+    if(btnStandard.checked){
+        imagem1.style.zIndex="999";
+        imagem1.style.position="absolute";
+        imagem1.style.display="flex";
+        imagem1.style.transition="3s";
+        imagem1.style.transform="translate(2500px)";
+    }
+}
+
+function jogadorMarcaReset(){
+    imagem1.style.transition="-10s";
+    imagem1.style.transform="translate(0, 0)";
+}
+
+function jogadorMarca2(){
+
+    if(btnDarkMode.checked){
+        imagem2.style.zIndex="999";
+        imagem2.style.position="absolute";
+        imagem2.style.display="flex";
+        imagem2.style.transition="3s";
+        imagem2.style.transform="translate(1500px)";
+    }
+}
+
+function jogadorMarcaReset2(){
+    imagem2.style.transition="-10s";
+    imagem2.style.transform="translate(0, 0)";
+}
+
+
+function jogadorMarca3(){
+
+    if(btnPsycho.checked){
+        imagem3.style.zIndex="999";
+        imagem2.style.transition="3s";
+    }
+}
+
+function jogadorMarcaReset3(){
+    imagem3.style.zIndex="-999";
+}
+
     
 
 window.addEventListener("load", inicializa);
