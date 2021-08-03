@@ -179,9 +179,7 @@ function controlaBola(){
         vCpu.style.top = posCpuY+"px"; 
 
 
-        jogadorMarca();
-        jogadorMarca2();
-        jogadorMarca3(); ////////////////////
+        jogadorMarca(); ////////////////////
         
 
         
@@ -234,7 +232,7 @@ function game(){
 function iniciaJogo(){
     if(!jogo){
         velBola = 6;
-        velCpu = 0; //////////////////
+        velCpu = 10; //////////////////
         velJogador = 10;
         cancelAnimationFrame(frames);
         jogo = true;
@@ -257,9 +255,7 @@ function iniciaJogo(){
 
 
         
-        jogadorMarcaReset();
-        jogadorMarcaReset2();
-        jogadorMarcaReset3();////////////////////
+        jogadorMarcaReset();////////////////////
 
         posBolaX = posBolaInicialX;
         posBolaY = posBolaInicialY;
@@ -312,6 +308,10 @@ btnDarkMode.addEventListener('change', function dark() {
         modo3.style.color="rgba(0, 0, 0, 0.2)";
         modo3.style.textShadow="1px 1px #505050, -1px -1px #3939395e";
         vCampo.style.borderColor="rgb(255, 255, 255)";
+        vBola.style.backgroundColor="rgb(110, 110, 110)";
+        vBola.style.backgroundImage="none";
+        vJogador.style.backgroundImage="none";
+        vCpu.style.backgroundImage="none";
 
         pararMusica()
 
@@ -335,6 +335,7 @@ var btnPsycho = document.getElementById("psycho");
         modo3.style.color="rgba(0, 0, 0, 0.2)";
         modo3.style.textShadow="1px 1px #505050, -1px -1px #3939395e";
 
+
         var r = Math.floor(Math.random()*255);
         var g = Math.floor(Math.random()*255);
         var b = Math.floor(Math.random()*255);
@@ -350,6 +351,10 @@ var btnPsycho = document.getElementById("psycho");
         var b3 = Math.floor(Math.random()*255*1.5);
         vJogador.style.backgroundColor="rgb("+r3+", "+g3+", "+b3+"";
         vCpu.style.backgroundColor="rgb("+r3+", "+g3+", "+b3+"";
+        vBola.style.backgroundColor="rgb(110, 110, 110)";
+        vBola.style.backgroundImage="none";
+        vJogador.style.backgroundImage="none";
+        vCpu.style.backgroundImage="none";
 
         musica();
     }     
@@ -365,9 +370,22 @@ var btnStandard = document.getElementById("standard");
     if(btnStandard.checked){
         vPainelPontos.style.color="rgb(160, 160, 160)";
         vPainelPontosCpu.style.color="rgb(160, 160, 160)";
-        vJogador.style.backgroundColor="rgb(110, 110, 110)";
-        vCpu.style.backgroundColor="rgb(110, 110, 110)";
-        vBola.style.backgroundColor="rgb(110, 110, 110)";
+        vJogador.style.backgroundColor="none";
+        vCpu.style.backgroundColor="none";
+        vBola.style.backgroundColor="none";
+        vBola.style.backgroundImage="url(Bola5-01.png)";
+        vBola.style.backgroundSize="contain";
+        vBola.style.backgroundRepeat="no-repeat";
+
+        vJogador.style.backgroundImage="url(Barra5-01.png)";
+        vJogador.style.backgroundSize="contain";
+        vJogador.style.backgroundRepeat="no-repeat";
+
+        vCpu.style.backgroundImage="url(Barra5-01.png)";
+        vCpu.style.backgroundSize="contain";
+        vCpu.style.backgroundRepeat="no-repeat";
+
+        
         vCampo.style.backgroundColor="#BDE6D9";
         document.body.style.backgroundColor="#F7D5E3";
         modo.style.color="#cfb6c0";
@@ -478,36 +496,6 @@ function jogadorMarcaReset(){
     imagem1.style.transition="-10s";
     imagem1.style.transform="translate(0, 0)";
 }
-
-function jogadorMarca2(){
-
-    if(btnDarkMode.checked){
-        imagem2.style.zIndex="999";
-        imagem2.style.position="absolute";
-        imagem2.style.display="flex";
-        imagem2.style.transition="3s";
-        imagem2.style.transform="translate(1500px)";
-    }
-}
-
-function jogadorMarcaReset2(){
-    imagem2.style.transition="-10s";
-    imagem2.style.transform="translate(0, 0)";
-}
-
-
-function jogadorMarca3(){
-
-    if(btnPsycho.checked){
-        imagem3.style.zIndex="999";
-        imagem2.style.transition="3s";
-    }
-}
-
-function jogadorMarcaReset3(){
-    imagem3.style.zIndex="-999";
-}
-
     
 
 window.addEventListener("load", inicializa);

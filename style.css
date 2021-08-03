@@ -1,12 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap');
+
 *{
     margin: 0;
     padding: 0;
 }
 
-header{
+body{
+    background-color: #F7D5E3;
+    justify-content: center;
+    align-items: center;
     font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+header{
+    font-family: 'Fascinate Inline', cursive;
     font-size: 50px;
     letter-spacing: 2px;
     margin: auto;
@@ -16,7 +27,6 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: rgb(134, 134, 134);
 }
 
 #imagens{
@@ -26,37 +36,6 @@ header{
 #imagempinypong1{
     position: absolute;
     left: -870px;
-}
-
-#imagempinypong2{
-    position: absolute;
-    left: -500px;
-    z-index: -999;
-    position:relative;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-}
-
-#imagempinypong3{
-    position: absolute;
-    z-index: 999;
-    margin: auto;
-
-    /*left: -500px;*/
-    top: -60px;
-
-}
-
-
-body{
-    background-color: #F7D5E3;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Bebas Neue', cursive;
-    font-size: 20px;
-    letter-spacing: 2px;
 }
 
 #dvPainel{
@@ -73,6 +52,8 @@ body{
     height: 500px;
     border: 5px solid rgb(255, 255, 255);
     background-color: #BDE6D9;
+    border-radius: 20px;
+
 }
 
 #dvBola{
@@ -84,26 +65,35 @@ body{
     background-color:rgb(110, 110, 110);
     background-size:contain;
     border-radius: 50%;
+    background-image: url(Bola5-01.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .barra_esquerda{
     position: absolute;
     width: 20px;
     height: 140px;
-    background-color: rgb(110, 110, 110);
+    /* background-color: rgb(110, 110, 110); */
     top: 180px;
     left: 10px;
     border-radius: 10px;
+    background-image: url(Barra5-01.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .barra_direita{
     position: absolute;
     width: 20px;
     height: 140px;
-    background-color: rgb(110, 110, 110);
+    /* background-color: rgb(110, 110, 110); */
     top: 180px;
     left: 930px;
     border-radius: 10px;
+    background-image: url(Barra5-01.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .itemPainel{
