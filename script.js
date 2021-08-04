@@ -291,6 +291,9 @@ var modo = document.getElementById('modo');
 var modo2 = document.getElementById('modo2');
 var modo3 = document.getElementById('modo3');
 var logo = document.getElementById(`logo`);
+var screen = document.getElementById(`screen`);
+var footer = document.getElementById(`footer`);
+var by = document.getElementById(`by`);
 
 ///DARK MODE
 var btnDarkMode = document.getElementById('darkMode')
@@ -315,11 +318,18 @@ btnDarkMode.addEventListener('change', function dark() {
         modo2.style.textShadow="var(--text-shadow2)";
         modo3.style.color="rgba(0, 0, 0, 0.2)";
         modo3.style.textShadow="var(--text-shadow2)";
-        vCampo.style.borderColor="rgb(255, 255, 255)";
+        vCampo.style.borderColor="rgb(0, 0, 0)";
         vBola.style.backgroundImage="none";
         vBola.style.backgroundColor="rgb(255, 255, 255)";
         vJogador.style.backgroundImage="none";
         vCpu.style.backgroundImage="none";
+        screen.style.display="flex";
+
+        vbtnIniciar.style.color="rgb(155, 119, 0)";
+        btnNewGame.style.color="rgb(155, 119, 0)";
+        footer.style.backgroundImage="url(footer2.jpg)";
+        footer.style.backgroundColor="#db58a200";
+        by.style.textShadow="var(--text-shadow5)";
 
         pararMusica()
 
@@ -332,7 +342,8 @@ var btnPsycho = document.getElementById("psycho");
 
     btnPsycho.addEventListener('change', function ver() {
     if(btnPsycho.checked){ 
-        logo.src="logo3.png";
+        logo.src="logopsycho2.png";
+        screen.zIndex="-1";
         vJogador.style.borderRadius="10px";
         vCpu.style.borderRadius="10px";
         vBola.style.borderRadius="50%";
@@ -366,6 +377,14 @@ var btnPsycho = document.getElementById("psycho");
         vBola.style.backgroundImage="none";
         vJogador.style.backgroundImage="none";
         vCpu.style.backgroundImage="none";
+        screen.style.display="none";
+
+        vbtnIniciar.style.color="var(--greyLight)";
+        btnNewGame.style.color="var(--greyLight)";
+        footer.style.backgroundImage="none";
+        footer.style.backgroundColor="#db58a200";
+        by.style.textShadow="var(--text-shadow6)";
+
 
         musica();
     }     
@@ -380,6 +399,7 @@ var btnStandard = document.getElementById("standard");
  btnStandard.addEventListener('change', function standard() {
     if(btnStandard.checked){
         logo.src="Logo 1-01.png";
+        screen.zIndex="-1";
         vJogador.style.borderRadius="10px";
         vCpu.style.borderRadius="10px";
         vBola.style.borderRadius="50%";
@@ -410,6 +430,13 @@ var btnStandard = document.getElementById("standard");
         modo3.style.color="var(--pinkLight2)";
         modo3.style.textShadow="var(--text-shadow1)";
         vCampo.style.borderColor="rgb(255, 255, 255)";
+        screen.style.display="none";
+
+        vbtnIniciar.style.color="var(--greyLight)";
+        btnNewGame.style.color="var(--greyLight)";
+        footer.style.backgroundImage="none"; 
+        footer.style.backgroundColor="var(--greyLight)";
+        by.style.textShadow="var(--text-shadow4)";
 
         pararMusica()
     }
@@ -438,7 +465,10 @@ function teclaEnterEspaço(){
     teclaEnterEspaço = event.keyCode;
 
     if(teclaEnterEspaço == 13 || teclaEnterEspaço == 32){
-        iniciaJogo()
+        iniciaJogo();
+        event.preventDefault()
+        //document.body.style.overflow="hidden";
+        //document.body.style.position="static";
         }
     }
 
