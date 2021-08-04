@@ -290,26 +290,34 @@ var vCampo = document.getElementById("dvJogo");
 var modo = document.getElementById('modo');
 var modo2 = document.getElementById('modo2');
 var modo3 = document.getElementById('modo3');
+var logo = document.getElementById(`logo`);
 
 ///DARK MODE
 var btnDarkMode = document.getElementById('darkMode')
 
 btnDarkMode.addEventListener('change', function dark() {
     if(btnDarkMode.checked){
+
+        logo.src="logopong.png";
+
+        vPainelPontos.style.color="rgb(255, 255, 255)";
+        vPainelPontosCpu.style.color="rgb(255, 255, 255)";
         vJogador.style.backgroundColor="rgb(255, 255, 255)";
+        vJogador.style.borderRadius="0px";
+        vCpu.style.borderRadius="0px";
+        vBola.style.borderRadius="0px";
         vCpu.style.backgroundColor="rgb(255, 255, 255)";
-        vBola.style.backgroundColor="rgb(255, 255, 255)";
-        vCampo.style.backgroundColor="rgb(36, 36, 36)";
-        document.body.style.backgroundColor="rgb(66, 66, 66)";
+        vCampo.style.backgroundColor="rgb(0, 0, 0)"; //rgb(36, 36, 36)
+        document.body.style.backgroundColor="rgb(251,193,0)";
         modo.style.color="rgba(0, 0, 0, 0.2)";
-        modo.style.textShadow="1px 1px #505050, -1px -1px #3939395e";
+        modo.style.textShadow="var(--text-shadow2)";
         modo2.style.color="rgba(0, 0, 0, 0.2)";
-        modo2.style.textShadow="1px 1px #505050, -1px -1px #3939395e";
+        modo2.style.textShadow="var(--text-shadow2)";
         modo3.style.color="rgba(0, 0, 0, 0.2)";
-        modo3.style.textShadow="1px 1px #505050, -1px -1px #3939395e";
+        modo3.style.textShadow="var(--text-shadow2)";
         vCampo.style.borderColor="rgb(255, 255, 255)";
-        vBola.style.backgroundColor="rgb(110, 110, 110)";
         vBola.style.backgroundImage="none";
+        vBola.style.backgroundColor="rgb(255, 255, 255)";
         vJogador.style.backgroundImage="none";
         vCpu.style.backgroundImage="none";
 
@@ -324,16 +332,20 @@ var btnPsycho = document.getElementById("psycho");
 
     btnPsycho.addEventListener('change', function ver() {
     if(btnPsycho.checked){ 
+        logo.src="logo3.png";
+        vJogador.style.borderRadius="10px";
+        vCpu.style.borderRadius="10px";
+        vBola.style.borderRadius="50%";
         document.body.style.backgroundColor="#000000";
         vCampo.style.borderColor="rgb(0, 0, 0)";
         vPainelPontos.style.color="#000000";
         vPainelPontosCpu.style.color="#000000";
         modo.style.color="rgba(0, 0, 0, 0.2)";
-        modo.style.textShadow="1px 1px #505050, -1px -1px #3939395e";
+        modo.style.textShadow="var(--text-shadow3)";
         modo2.style.color="rgba(0, 0, 0, 0.2)";
-        modo2.style.textShadow="1px 1px #505050, -1px -1px #3939395e";
+        modo2.style.textShadow="var(--text-shadow3)";
         modo3.style.color="rgba(0, 0, 0, 0.2)";
-        modo3.style.textShadow="1px 1px #505050, -1px -1px #3939395e";
+        modo3.style.textShadow="var(--text-shadow3)";
 
 
         var r = Math.floor(Math.random()*255);
@@ -351,7 +363,6 @@ var btnPsycho = document.getElementById("psycho");
         var b3 = Math.floor(Math.random()*255*1.5);
         vJogador.style.backgroundColor="rgb("+r3+", "+g3+", "+b3+"";
         vCpu.style.backgroundColor="rgb("+r3+", "+g3+", "+b3+"";
-        vBola.style.backgroundColor="rgb(110, 110, 110)";
         vBola.style.backgroundImage="none";
         vJogador.style.backgroundImage="none";
         vCpu.style.backgroundImage="none";
@@ -368,8 +379,12 @@ var btnStandard = document.getElementById("standard");
 
  btnStandard.addEventListener('change', function standard() {
     if(btnStandard.checked){
-        vPainelPontos.style.color="rgb(160, 160, 160)";
-        vPainelPontosCpu.style.color="rgb(160, 160, 160)";
+        logo.src="Logo 1-01.png";
+        vJogador.style.borderRadius="10px";
+        vCpu.style.borderRadius="10px";
+        vBola.style.borderRadius="50%";
+        vPainelPontos.style.color="var(--greyLight)";
+        vPainelPontosCpu.style.color="var(--greyLight)";
         vJogador.style.backgroundColor="none";
         vCpu.style.backgroundColor="none";
         vBola.style.backgroundColor="none";
@@ -386,14 +401,14 @@ var btnStandard = document.getElementById("standard");
         vCpu.style.backgroundRepeat="no-repeat";
 
         
-        vCampo.style.backgroundColor="#BDE6D9";
-        document.body.style.backgroundColor="#F7D5E3";
-        modo.style.color="#cfb6c0";
-        modo.style.textShadow="rgb(255 255 255) 1px 1px, rgb(189 171 171 / 37%) -1px -1px";
-        modo2.style.color="#cfb6c0";
-        modo2.style.textShadow="rgb(255 255 255) 1px 1px, rgb(189 171 171 / 37%) -1px -1px";
-        modo3.style.color="#cfb6c0";
-        modo3.style.textShadow="rgb(255 255 255) 1px 1px, rgb(189 171 171 / 37%) -1px -1px";
+        vCampo.style.backgroundColor="var(--greenLight)";
+        document.body.style.backgroundColor="var(--pinkLight)";
+        modo.style.color="var(--pinkLight2)";
+        modo.style.textShadow="var(--text-shadow1)";
+        modo2.style.color="var(--pinkLight2)";
+        modo2.style.textShadow="var(--text-shadow1)";
+        modo3.style.color="var(--pinkLight2)";
+        modo3.style.textShadow="var(--text-shadow1)";
         vCampo.style.borderColor="rgb(255, 255, 255)";
 
         pararMusica()

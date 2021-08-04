@@ -2,22 +2,35 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap');
 
+:root{
+    --pinkLight: #F7D5E3;
+    --pinkLight2: #cfb6b6;
+    --greenLight: #BDE6D9;
+    --greyLight: rgb(110, 110, 110);
+    --greyLightHoverBackground: #0202021a;
+
+    --text-shadow1: rgb(255 255 255) 1px 1px, rgb(189 171 171 / 37%) -1px -1px;
+    --text-shadow2: 1px 1px rgb(255, 203, 32), -1px -1px #2020202f;
+    --text-shadow3: 1px 1px #505050, -1px -1px #3939395e;
+
+    --fontFamilyMain: 'Bebas Neue', cursive;
+}
+
 *{
     margin: 0;
     padding: 0;
 }
 
 body{
-    background-color: #F7D5E3;
+    background-color: var(--pinkLight);
     justify-content: center;
     align-items: center;
-    font-family: 'Bebas Neue', cursive;
+    font-family: var(--fontFamilyMain);
     font-size: 20px;
     letter-spacing: 2px;
 }
 
 header{
-    font-family: 'Fascinate Inline', cursive;
     font-size: 50px;
     letter-spacing: 2px;
     margin: auto;
@@ -51,7 +64,7 @@ header{
     width: 960px;
     height: 500px;
     border: 5px solid rgb(255, 255, 255);
-    background-color: #BDE6D9;
+    background-color: var(--greenLight);
     border-radius: 20px;
 
 }
@@ -62,7 +75,7 @@ header{
     left: 475px;
     width: 20px;
     height: 20px;
-    background-color:rgb(110, 110, 110);
+    background-color:var(--greyLight);
     background-size:contain;
     border-radius: 50%;
     background-image: url(Bola5-01.png);
@@ -105,23 +118,23 @@ header{
 }
 
 #txtPontos{
-    color: rgb(160, 160, 160);
+    color: var(--greyLight);
     border: none;
     background-color: rgba(48, 43, 126, 0);
     font-size: 50px;
     width: 120px;
-    font-family: 'Bebas Neue', cursive;
+    font-family: var(--fontFamilyMain);
     font-size: 60px;
 }
 
 #txtPontosCpu{
-    color: rgb(160, 160, 160);
+    color: var(--greyLight);
     border: none;
     background-color: rgba(223, 41, 41, 0);
     font-size: 50px;
     width: 120px;
     text-align: right;
-    font-family: 'Bebas Neue', cursive;
+    font-family: var(--fontFamilyMain);
     font-size: 60px;
 }
 
@@ -135,36 +148,36 @@ header{
 #btnIniciar{
     height: 40px;
     width: 100px;
-    color: rgb(134, 134, 134);
+    color: var(--greyLight);
     border-radius: 20px;
     border: 2px solid #ffffff02;
     background-color: #f7d5e300;
     box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     margin-left: 10px;
-    font-family: 'Bebas Neue', cursive;
+    font-family: var(--fontFamilyMain);
     font-size: 20px;
     letter-spacing: 2px;
     text-align: center;
 }
 
 #btnIniciar:hover{
-    border: 2px solid rgba(134, 134, 134, 0.514);
+    border: 2px solid rgba(102, 102, 102, 0.123);
     color: rgba(34, 34, 34, 0.5);
-    background-color: #0202021a;
+    background-color: var(--greyLightHoverBackground);
 }
 
 #btnNewGame{
     height: 40px;
     width: 150px;
-    color: rgb(134, 134, 134);
+    color: var(--greyLight);
     border-radius: 20px;
     border: 2px solid #ffffff02;
     background-color: #f7d5e300;
     box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     margin-left: 10px;
-    font-family: 'Bebas Neue', cursive;
+    font-family: var(--fontFamilyMain);
     font-size: 20px;
     letter-spacing: 2px;
 }
@@ -172,7 +185,7 @@ header{
 #btnNewGame:hover{
     border: 2px solid rgba(102, 102, 102, 0.123);
     color: rgba(34, 34, 34, 0.5);
-    background-color: #0202021a;
+    background-color: var(--greyLightHoverBackground);
 }
 
 .toggle_div{
@@ -186,28 +199,28 @@ header{
 #modo{
     padding: 10px;
     padding-left: 50px;
-    color: #cfb6c0;
-    text-shadow: rgb(255 255 255) 1px 1px, rgb(189 171 171 / 37%) -1px -1px;
+    color: var(--pinkLight2);
+    text-shadow: var(--text-shadow1);
 }
 
 #modo2{
     padding: 10px;
     padding-left: 50px;
-    color: #cfb6c0;
-    text-shadow: rgb(255 255 255) 1px 1px, rgb(189 171 171 / 37%) -1px -1px;
+    color: var(--pinkLight2);
+    text-shadow: var(--text-shadow1);
 }
 
 #modo3{
     padding: 10px;
     padding-left: 50px;
-    color: #cfb6c0;
-    text-shadow: rgb(255 255 255) 1px 1px, rgb(189 171 171 / 37%) -1px -1px;
+    color: var(--pinkLight2);
+    text-shadow: var(--text-shadow1);
 }
 
 .circulo{
-    color: rgba(0, 0, 0, 0.2);
+    color: var(--pinkLight2);
     font-weight: 900;
-    text-shadow: rgb(255 255 255) 1px 1px, rgb(189 171 171 / 37%) -1px -1px;
+    text-shadow: var(--text-shadow1);
     position: relative;
     width: 20px;
     height: 20px;
@@ -224,7 +237,7 @@ header{
 .circulo:before{
     content: "";
     position:absolute;
-    color: #cfb6c0;
+    color: var(--pinkLight2);
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -238,11 +251,11 @@ header{
 
 .circulo:checked::before{
     content: "";
-    color: rgb(255, 255, 255);
-    background-color: rgb(110, 110, 110);
+    color: var(--pinkLight2);
+    background-color: var(--greyLight);
 }
 
 .circulo:hover{
     color: rgba(34, 34, 34, 0.5);
-    background-color: #0202021a;
+    background-color: var(--greyLightHoverBackground);
 }
