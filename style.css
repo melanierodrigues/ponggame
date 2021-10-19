@@ -285,6 +285,8 @@ footer{
     padding-bottom: 30px;
     background-color: var(--greyLight);
     background-image: none;
+    height: 15vh;
+    width: 100vw;
 }
 
 #by{
