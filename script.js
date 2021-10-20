@@ -540,7 +540,12 @@ function tecla2(){
 function jogadorMarcaReset(){
     imagem1.style.transition="-10s";
     imagem1.style.transform="translate(0, 0)";
+    imagem1.style.transform="translateX(-2500px)";
 }
+
+if (screen.width < 480 && screen.height < 850) {
+    document.fullscreenElement();
+} 
     
 
 window.addEventListener("load", inicializa);

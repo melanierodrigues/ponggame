@@ -332,7 +332,6 @@ footer{
     }
 
     header {
-        margin: 5vh;
         margin-top: 0px;
         margin-left: 10vw;
         position: absolute;
@@ -354,7 +353,7 @@ footer{
         transform-box: fill-box;
 
         left: 0px;
-        top: calc(50vh - 290px);
+        top: calc(50vh - 250px); /* top: calc(50vh - 290px); */
         margin: 0px;
         margin-top: 0px;
 
