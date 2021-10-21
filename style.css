@@ -332,6 +332,9 @@ footer{
     }
 
     header {
+        margin-top: -0.5vh;
+
+        /*        
         margin-top: 10vh;
         margin-left: 10vw;
         position: absolute;
@@ -341,7 +344,8 @@ footer{
         width: auto;
         height: 100vh;
         justify-content: end;
-        align-content: center;
+        align-content: center; 
+        */
     }
 
     main {
