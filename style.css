@@ -324,7 +324,12 @@ footer{
         top: -10vh;
         position: absolute;
     }
+
     header, main, footer {
+        display: none;
+    }
+
+    #mobile {
         display: none;
     }
 }
@@ -408,5 +413,9 @@ footer{
 
     .iniciar {
         right: calc(50vw - 240px);
+    }
+
+    #rotate {
+        display: none;
     }
 }

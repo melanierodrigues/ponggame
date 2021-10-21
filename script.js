@@ -543,7 +543,7 @@ function jogadorMarcaReset(){
 
 // FullScren when you have mobile in horizontal
 var logo = document.getElementById('logo');
-var teste1 = document.getElementById('dvJogo');
+var teste1 = document.getElementById('mobilediv');
 
 observer = new IntersectionObserver ((entries) => {
     entries.forEach(entry => {
@@ -551,6 +551,7 @@ observer = new IntersectionObserver ((entries) => {
         function hello1() {
             if(entry.intersectionRatio > 0) { //screen.width < 480 && screen.height < 850      entry.intersectionRatio > 0
                 //document.documentElement.requestFullscreen();
+                document.documentElement.requestFullscreen();
             }
         }
         requestAnimationFrame(hello1);
@@ -558,7 +559,7 @@ observer = new IntersectionObserver ((entries) => {
     })
 });
 
-observer.observe(logo);
+observer.observe(teste1);
 
 
 
