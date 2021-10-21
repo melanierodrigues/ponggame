@@ -543,9 +543,11 @@ function jogadorMarcaReset(){
     imagem1.style.transform="translateX(-2500px)";
 }
 
-if (screen.width < 480 && screen.height < 850) {
-    document.fullscreenElement();
-} 
-    
+function mobileFullScreen() {
+    if (screen.width < 480 && screen.height < 850) {
+        document.documentElement.requestFullscreen();
+    } 
+}
+mobileFullScreen()
 
 window.addEventListener("load", inicializa);
