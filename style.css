@@ -384,14 +384,6 @@ footer{
         width: 100%;
     }
 
-    #mobilediv {
-        background-color: chartreuse;
-        height: 100vh;
-        width: 100vw;
-        position: relative;
-        display: block;
-    }
-
     #please {
         height: 100vh;
         width: 100vw;
@@ -403,6 +395,17 @@ footer{
         align-items: center;
         justify-content: center;
         background-color: rgb(48, 0, 10);
+    }
+
+    #view-fullscreen {
+        height: 100px;
+        width: auto;
+        padding: 10px;
+        z-index: 999;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
     }
 
     #imagempinypong1 {
