@@ -58,6 +58,10 @@ header{
     justify-content: center;
 }
 
+#mobile {
+    display: none;
+}
+
 #screen{
     position: absolute;
     z-index: 999;
@@ -351,6 +355,7 @@ footer{
     main {
         inset: 0;
         position: absolute;
+        position: relative; /* ver se é para apagar */
         transform: scale(0.5);
         transform-style: preserve-3d;
         transform-origin: center;
@@ -362,6 +367,31 @@ footer{
         margin-top: 0px;
 
         justify-content:unset;
+
+        height: 100vh;
+        width: 100vw;
+    }
+
+    #mobile {
+        display: block;
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
+
+    #mobilediv {
+        background-color: chartreuse;
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+        display: block;
+    }
+
+    #please {
+        font-size: 20px;
+        position: absolute;
+        margin: 0 auto;
+        inset: 0;
     }
 
     #imagempinypong1 {
