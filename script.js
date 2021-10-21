@@ -543,7 +543,7 @@ function jogadorMarcaReset(){
 
 // FullScren when you have mobile in horizontal
 var logo = document.getElementById('logo');
-var teste1 = document.getElementById('please');
+var teste1 = document.getElementById('dvJogo');
 
 observer = new IntersectionObserver ((entries) => {
     entries.forEach(entry => {
