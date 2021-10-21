@@ -282,8 +282,6 @@ function inicializa(){
     vPainelPontosCpu = document.getElementById("txtPontosCpu");
     document.addEventListener("keydown", teclaDw);
     document.addEventListener("keyup", teclaUp);
-
-    mobileFullScreen(); ////////////////////////////////////////////////////////////////////////// ver 
 }
 
 
@@ -333,9 +331,7 @@ btnDarkMode.addEventListener('change', function dark() {
         footer.style.backgroundColor="#db58a200";
         by.style.textShadow="var(--text-shadow5)";
 
-        pararMusica()
-
-        
+        pararMusica();   
     }
 })
 
@@ -392,8 +388,7 @@ var btnPsycho = document.getElementById("psycho");
     }     
     var tmp;
     tmp = setTimeout(ver, 500);
-
-})
+});
 
 //////////// Modo Standard
 var btnStandard = document.getElementById("standard");
@@ -440,7 +435,8 @@ var btnStandard = document.getElementById("standard");
         footer.style.backgroundColor="var(--greyLight)";
         by.style.textShadow="var(--text-shadow4)";
 
-        pararMusica()
+        pararMusica();
+        mobileFullScreen(); 
     }
 })
 
