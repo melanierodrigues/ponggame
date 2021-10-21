@@ -564,9 +564,9 @@ observer.observe(logo);
 
 
     var viewFullScreen = document.getElementById("view-fullscreen");
-
+    
     if (viewFullScreen) {
-        viewFullScreen.addEventListener("scroll", function () {
+        viewFullScreen.addEventListener("click", function () {
             var docElm = document.documentElement;
             if (docElm.requestFullscreen) {
                 docElm.requestFullscreen();
