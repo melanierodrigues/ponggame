@@ -540,19 +540,15 @@ function jogadorMarcaReset(){
     imagem1.style.transform="translateX(-2500px)";
 }
 
-function mobileFullScreen() {
-    if (screen.width < 480 && screen.height < 850) {
-        document.documentElement.requestFullscreen();
-    } 
-}
 
+// FullScren when you have mobile in horizontal
 var logo = document.getElementById('logo');
 
 observer = new IntersectionObserver ((entries) => {
     entries.forEach(entry => {
 
         function hello1() {
-            if(screen.width < 480 && screen.height < 850) {   // entry.intersectionRatio > 0
+            if(screen.width < 480 && screen.height < 850) {
                 document.documentElement.requestFullscreen();
             }
         }
@@ -562,7 +558,5 @@ observer = new IntersectionObserver ((entries) => {
 });
 
 observer.observe(logo);
-
-
 
 window.addEventListener("load", inicializa);
