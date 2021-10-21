@@ -393,10 +393,15 @@ footer{
     }
 
     #please {
+        height: 100vh;
+        width: 100vw;
         font-size: 20px;
-        position: absolute;
         margin: 0 auto;
-        inset: 0;
+        display: flex;
+        color: crimson;
+        z-index: 999;
+        align-items: center;
+        justify-content: center;
     }
 
     #imagempinypong1 {

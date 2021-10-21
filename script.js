@@ -543,14 +543,13 @@ function jogadorMarcaReset(){
 
 // FullScren when you have mobile in horizontal
 var logo = document.getElementById('logo');
-var teste1 = document.getElementById('mobilediv');
+var teste1 = document.getElementById('please');
 
 observer = new IntersectionObserver ((entries) => {
     entries.forEach(entry => {
 
         function hello1() {
-            if(entry.intersectionRatio > 0) { //screen.width < 480 && screen.height < 850      entry.intersectionRatio > 0
-                //document.documentElement.requestFullscreen();
+            if(screen.width < 480 && screen.height < 850) { //screen.width < 480 && screen.height < 850
                 document.documentElement.requestFullscreen();
             }
         }
@@ -560,7 +559,6 @@ observer = new IntersectionObserver ((entries) => {
 });
 
 observer.observe(teste1);
-
 
 
 window.addEventListener("load", inicializa);
