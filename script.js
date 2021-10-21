@@ -436,7 +436,6 @@ var btnStandard = document.getElementById("standard");
         by.style.textShadow="var(--text-shadow4)";
 
         pararMusica();
-        mobileFullScreen(); 
     }
 })
 
@@ -546,5 +545,8 @@ function mobileFullScreen() {
         document.documentElement.requestFullscreen();
     } 
 }
+
+
+document.addEventListener('change', mobileFullScreen);
 
 window.addEventListener("load", inicializa);
