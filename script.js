@@ -463,7 +463,7 @@ function teclaEnterEspaço(){
 
     if(teclaEnterEspaço == 13 || teclaEnterEspaço == 32){
         iniciaJogo();
-        event.preventDefault()
+        event.preventDefault();
         //document.body.style.overflow="hidden";
         //document.body.style.position="static";
         }
@@ -542,11 +542,10 @@ function jogadorMarcaReset(){
 
 function mobileFullScreen() {
     if (screen.width < 480 && screen.height < 850) {
-        requestFullscreen();
+        document.documentElement.requestFullscreen();
     } 
 }
 
-
-document.addEventListener('change', mobileFullScreen());
+document.addEventListener("change", mobileFullScreen);
 
 window.addEventListener("load", inicializa);
