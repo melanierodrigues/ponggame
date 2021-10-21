@@ -562,8 +562,9 @@ observer.observe(logo);
 
 ////////////////////////////////
 
-(function () {
+
     var viewFullScreen = document.getElementById("view-fullscreen");
+    
     if (viewFullScreen) {
         viewFullScreen.addEventListener("click", function () {
             var docElm = document.documentElement;
@@ -582,7 +583,6 @@ observer.observe(logo);
             }
         }, false);
     }
-
 
 
 window.addEventListener("load", inicializa);
