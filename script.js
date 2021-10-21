@@ -540,16 +540,10 @@ function jogadorMarcaReset(){
     imagem1.style.transform="translateX(-2500px)";
 }
 
-function mobileFullScreen() {
-    if (screen.width < 480 && screen.height < 850) {
-        document.documentElement.requestFullscreen();
-    } 
-}
-
 
 // FullScren when you have mobile in horizontal
 var logo = document.getElementById('logo');
-var teste1 = document;
+var teste1 = document.getElementById('dvJogo');
 
 observer = new IntersectionObserver ((entries) => {
     entries.forEach(entry => {
