@@ -551,7 +551,8 @@ observer = new IntersectionObserver ((entries) => {
         function hello1() {
             if(entry.intersectionRatio > 0) { //screen.width < 480 && screen.height < 850
                 //document.documentElement.requestFullscreen();
-                document.documentElement.requestFullscreen();
+                //teste1.style.backgroundColor = "rgb(110, 110, 110)";
+                requestFullscreen();
             }
         }
         requestAnimationFrame(hello1);
@@ -559,7 +560,7 @@ observer = new IntersectionObserver ((entries) => {
     })
 });
 
-observer.observe(teste1);
+observer.observe(logo);
 
 
 window.addEventListener("load", inicializa);
