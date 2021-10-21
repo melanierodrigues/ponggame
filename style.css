@@ -342,6 +342,7 @@ footer{
         height: 100vh;
         justify-content: end;
         align-content: center;
+        top: calc(50vh - 250px);
     }
 
     main {
