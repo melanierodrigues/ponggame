@@ -547,22 +547,24 @@ function mobileFullScreen() {
 }
 
 
-window.onload = maxWindow;
 
-function maxWindow() {
-    window.moveTo(0, 0);
+function requestFullScreen(element) {
+    // Supports most browsers and their versions.
+    var requestMethod = element.requestFullScreen || element.webkitRequestFullScreen || element.mozRequestFullScreen || element.msRequestFullScreen;
 
-    if (document.all) {
-        top.window.resizeTo(screen.availWidth, screen.availHeight);
-    }
-
-    else if (document.layers || document.getElementById) {
-        if (top.window.outerHeight < screen.availHeight || top.window.outerWidth < screen.availWidth) {
-            top.window.outerHeight = screen.availHeight;
-            top.window.outerWidth = screen.availWidth;
+    if (requestMethod) { // Native full screen.
+        requestMethod.call(element);
+    } else if (typeof window.ActiveXObject !== "undefined") { // Older IE.
+        var wscript = new ActiveXObject("WScript.Shell");
+        if (wscript !== null) {
+            wscript.SendKeys("{F11}");
         }
     }
 }
+
+var elem = document.body; // Make the body go full screen.
+requestFullScreen(elem);
+
 
 
 window.addEventListener("load", inicializa);
