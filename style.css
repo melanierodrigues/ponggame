@@ -332,18 +332,7 @@ footer{
     }
 
     header {
-        /* margin-top: -0.5vh; */
-
-        margin-top: 10vh;
-        margin-left: 10vw;
-        position: absolute;
-        left: 0px;
-        bottom: 0px;
-        transform: rotate(90deg);
-        width: auto;
-        height: 100vh;
-        justify-content: end;
-        align-content: center; 
+        margin-top: -0.5vh;
 
         /*        
         margin-top: 10vh;
