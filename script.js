@@ -558,7 +558,7 @@ observer = new IntersectionObserver ((entries) => {
     })
 });
 
-observer.observe(teste1);
+observer.observe(logo);
 
 
 window.addEventListener("load", inicializa);
