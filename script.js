@@ -551,7 +551,7 @@ observer = new IntersectionObserver ((entries) => {
         function hello1() {
             if(entry.intersectionRatio > 0) { //screen.width < 480 && screen.height < 850
                 //document.documentElement.requestFullscreen();
-                fullscreenElement();
+                document.documentElement.fullscreenElement();
             }
         }
         requestAnimationFrame(hello1);
