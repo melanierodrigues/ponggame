@@ -282,6 +282,8 @@ function inicializa(){
     vPainelPontosCpu = document.getElementById("txtPontosCpu");
     document.addEventListener("keydown", teclaDw);
     document.addEventListener("keyup", teclaUp);
+
+    mobileFullScreen();
 }
 
 
@@ -545,6 +547,6 @@ function mobileFullScreen() {
         document.documentElement.requestFullscreen();
     } 
 }
-mobileFullScreen();
+
 
 window.addEventListener("load", inicializa);
