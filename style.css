@@ -39,7 +39,7 @@ body, html{
     height: 100vh;
 }
 
-#rotate, #rodar {
+#rotate, #rodar, #fraserodar {
     display: none;
 }
 
@@ -323,9 +323,19 @@ footer{
         width: 280px;
         height: auto;
         position: absolute;
-        bottom: calc(50vh - 127.74px);
+        bottom: calc(50vh - 77.74px);
         left: calc(50vw - 140px);
         animation: rodar 3s 0.5s infinite;
+    }
+
+    #fraserodar {
+        font-size: 20px;
+        display: flex;
+        position: absolute;
+        margin: 50px 20px;
+        text-align: center;
+        color: #977386;
+        bottom: 0;
     }
 
     @keyframes rodar {
@@ -350,7 +360,7 @@ footer{
 }
 
 @media only screen and (max-width: 850px) and (max-height: 485px) {
-    #rotate, #rodar {
+    #rotate, #rodar, #fraserodar {
         display: none;
     }
 
