@@ -499,7 +499,7 @@ footer{
     }
 
     #dvJogo {
-        right: calc((100vw - 485px) / 2); /*         right: calc(50vw - 235px); */
+        right: calc((100vw - 480px) / 2); /*         right: calc(50vw - 235px); */
         margin: auto;
         margin-top: 20px;
         justify-content: center;
