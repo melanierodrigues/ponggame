@@ -220,6 +220,20 @@ function teclaUp(){
     }
 }
 
+//////////////////////
+
+var cima = document.getElementById("cima");
+var baixo = document.getElementById("baixo");
+    
+cima.addEventListener("click", function () {
+        dirJy=-1;
+})
+
+baixo.addEventListener("click", function () {
+    dirJy=0;
+})
+////////////////////
+
 function game(){
     if(jogo){
         controlaJogador();
@@ -232,7 +246,7 @@ function game(){
 function iniciaJogo(){
     if(!jogo){
         velBola = 6;
-        velCpu = 10; //////////////////
+        velCpu = 10;
         velJogador = 10;
         cancelAnimationFrame(frames);
         jogo = true;
@@ -255,7 +269,7 @@ function iniciaJogo(){
 
 
         
-        jogadorMarcaReset();////////////////////
+        jogadorMarcaReset();
 
         posBolaX = posBolaInicialX;
         posBolaY = posBolaInicialY;
@@ -285,7 +299,6 @@ function inicializa(){
 }
 
 
-
 var vCampo = document.getElementById("dvJogo");
 var modo = document.getElementById('modo');
 var modo2 = document.getElementById('modo2');
@@ -295,7 +308,7 @@ var screen = document.getElementById(`screen`);
 var footer = document.getElementById(`footer`);
 var by = document.getElementById(`by`);
 
-///DARK MODE
+// DARK MODE
 var btnDarkMode = document.getElementById('darkMode')
 
 btnDarkMode.addEventListener('change', function dark() {
@@ -335,7 +348,7 @@ btnDarkMode.addEventListener('change', function dark() {
     }
 })
 
-///Psycho MODE
+// Psycho MODE
 var btnPsycho = document.getElementById("psycho");
 
     btnPsycho.addEventListener('change', function ver() {
@@ -390,7 +403,7 @@ var btnPsycho = document.getElementById("psycho");
     tmp = setTimeout(ver, 500);
 });
 
-//////////// Modo Standard
+// Standard Modo
 var btnStandard = document.getElementById("standard");
 
  btnStandard.addEventListener('change', function standard() {
@@ -560,9 +573,7 @@ observer = new IntersectionObserver ((entries) => {
 
 observer.observe(logo);
 
-////////////////////////////////
-
-
+// FullScreen - Mobile
     var viewFullScreen = document.getElementById("view-fullscreen");
     
     if (viewFullScreen) {
