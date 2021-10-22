@@ -227,10 +227,12 @@ var baixo = document.getElementById("baixo");
     
 cima.addEventListener("click", function () {
         dirJy=-1;
+
 })
 
 baixo.addEventListener("click", function () {
-    dirJy=0;
+        dirJy=+1;
+
 })
 ////////////////////
 
