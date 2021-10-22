@@ -484,7 +484,7 @@ footer{
         height: 150px;
         width: 150px;
         border-radius: 50%;
-        border: 10px double whitesmoke;
+        border: 10px double white;
         background-color: var(--greyLight);
         opacity: 0.3;
         margin-bottom: 50px;
@@ -499,9 +499,7 @@ footer{
     }
 
     #dvJogo {
-
-
-        position: relative;
+        right: calc(50vw - 279.5px);
         }
 
     .iniciar {
