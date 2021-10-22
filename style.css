@@ -378,18 +378,9 @@ footer{
     }
 
     main {
-        inset: 0;
-        position: absolute;
-        position: relative; /* ver se é para apagar */
+        position: relative;
         transform: scale(0.5);
-        transform-style: preserve-3d;
-        transform-origin: center;
-        transform-box: fill-box;
-        left: 0px;
-        top: calc(50vh - 250px); /* top: calc(50vh - 290px); */
-        margin: 0px;
-        margin-top: 0px;
-        justify-content:unset;
+        top: calc(50vh - 250px);
         height: 100vh;
         width: 100vw;
     }
@@ -508,8 +499,11 @@ footer{
     }
 
     #dvJogo {
-        right: calc(50vw - 330px);
-    }
+        right: calc(50vw - 242.5px);
+
+        position: relative;
+        justify-content: none;
+        }
 
     .iniciar {
         right: calc(50vw - 240px);
