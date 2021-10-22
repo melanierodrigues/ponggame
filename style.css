@@ -357,6 +357,10 @@ footer{
         */
     }
 
+    #logo {
+        margin-top: -100px;
+    }
+
     main {
         inset: 0;
         position: absolute;
