@@ -315,9 +315,11 @@ footer{
     #rotate {
         width: 100vw;
         height: 100vh;
+        display: flex;
     }
 
     #rodar {
+        display: flex;
         width: 280px;
         height: auto;
         position: absolute;
