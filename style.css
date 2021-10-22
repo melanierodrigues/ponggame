@@ -390,22 +390,77 @@ footer{
         font-size: 20px;
         margin: 0 auto;
         display: flex;
-        color: crimson;
+        color: var(--greyLight);
         z-index: 999;
         align-items: center;
         justify-content: center;
-        background-color: rgb(48, 0, 10);
+        background-color: var(--pinkLight);
+        position: relative;
+        bottom: 30px;
     }
 
     #view-fullscreen {
-        height: 100px;
-        width: auto;
+        height: 60px;
+        width: 140px;
         padding: 10px;
-        z-index: 999;
-        margin: 0 auto;
-        align-items: center;
-        justify-content: center;
+        border-radius: 10px;
+        bottom: calc(50vh - 50px);
+        left: calc(50vw - 70px);
         position: absolute;
+        background-color: var(--pinkLight);
+        z-index: 999;
+        border-radius: 20px;
+        border: 2px solid #ffffff02;
+        background-color: #f7d5e300;
+        box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        font-family: var(--fontFamilyMain);
+        font-size: 20px;
+        letter-spacing: 2px;
+        text-align: center;
+        color: crimson;
+    }
+    
+    #seta {
+        height: 9px;
+        width: 25px;
+        fill: var(--greyLight);
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        left: calc(50vw - 12.5px);
+        bottom: calc(5vh + 9px);
+        animation: seta 2s 1s infinite both;
+        z-index: 999;
+    }
+
+    @keyframes seta {
+        0% {
+            transform: scale3d(1, 1, 1);
+            transform: translateY(0px);
+        }
+        30% {
+            transform: scale3d(1.25, 0.75, 1);
+            transform: translateY(-10px);
+        }
+        40% {
+            transform: scale3d(0.75, 1.25, 1);
+        }
+        50% {
+            transform: scale3d(1.15, 0.85, 1);
+        }
+        65% {
+            transform: scale3d(0.95, 1.05, 1);
+        }
+        75% {
+            transform: scale3d(1.05, 0.95, 1);
+        }
+        100% {
+            transform: scale3d(1, 1, 1);
+            transform: translateY(0);
+        }
     }
 
     #imagempinypong1 {
