@@ -225,14 +225,26 @@ function teclaUp(){
 var cima = document.getElementById("cima");
 var baixo = document.getElementById("baixo");
     
-cima.addEventListener("click", function () {
-        dirJy=-1;
+cima.addEventListener("touchstart", function () {
+    event.preventDefault();
+    dirJy=-1;
 
 })
 
-baixo.addEventListener("click", function () {
-        dirJy=+1;
+cima.addEventListener("touchend", function () {
+    event.preventDefault();
+    dirJy=0;
 
+})
+
+baixo.addEventListener("touchstart", function () {
+    event.preventDefault();
+        dirJy=+1;
+})
+
+baixo.addEventListener("touchend", function () {
+    event.preventDefault();
+        dirJy=0;
 })
 ////////////////////
 
