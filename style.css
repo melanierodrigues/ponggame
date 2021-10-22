@@ -499,10 +499,9 @@ footer{
     }
 
     #dvJogo {
-        right: calc(50vw - 242.5px);
+
 
         position: relative;
-        justify-content: none;
         }
 
     .iniciar {
