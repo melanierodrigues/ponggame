@@ -1,4 +1,4 @@
-//// IMAGENS
+// IMAGENS
 var imagem1 = document.getElementById("imagempinypong1");
 var imagem2 = document.getElementById("imagempinypong2");
 var imagem3 = document.getElementById("imagempinypong3");
